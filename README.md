@@ -28,3 +28,4 @@ The 'ALLOY_SDK' parameter is the SDK key. Please contact CSM or support@alloy.co
 
 3. run npm install
 4. run npm run dev
+5. to test Prove, click Prove 

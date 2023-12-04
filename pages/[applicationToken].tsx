@@ -42,6 +42,7 @@ const DocV = () => {
   }, [applicationToken]);
 
   const callback = (data: any) => {
+    console.log(data);
     if (data.status === "closed") {
       // this means the user closed the DocV Modal instead of finishing
       recordResponse(
@@ -90,7 +91,7 @@ const DocV = () => {
         >
           Back
         </Button>
-        <Title>Document Verification</Title>
+        <Title>Prefill Verification</Title>
         <Body>
           You will be asked to go through a process to verify your identity.
           This process helps us ensure that we are meeting the compliance

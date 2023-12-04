@@ -53,6 +53,7 @@ function Home() {
       phone_number: phoneNumber,
       birth_date: birthDate,
       address_country_code: "US",
+      ip_address_v4: "192.0.0.0",
       ...(!isPrefill && { name_first: firstName}),
       ...(!isPrefill && { name_last: lastName}),
       ...(!isPrefill && { email_address: email}),
@@ -91,7 +92,8 @@ function Home() {
     const journeyStatus = jsonResponse.status.toLowerCase();
     if (
       journeyStatus === "pending_step_up" ||
-      journeyStatus === "pending_documents"
+      journeyStatus === "pending_documents" ||
+      journeyStatus === "data_request"
     ) {
       router.push(`/${jsonResponse.journey_application_token}`);
     } else if (journeyStatus === "completed") {
